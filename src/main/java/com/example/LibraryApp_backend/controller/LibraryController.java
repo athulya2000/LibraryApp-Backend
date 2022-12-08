@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -34,5 +35,14 @@ public class LibraryController {
         map.put("status","success");
         return map;
 
+    }
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/login",consumes = "application/json",produces = "application/json")
+    public List<Libaray> UserLogin(@RequestBody Libaray l){
+        String username=l.getUsername().toString();
+        String password= l.getPassword().toString();
+        System.out.println(username);
+        System.out.println(password);
+        return (List<Libaray>) dao.Login(l.getUsername(),l.getPassword());
     }
 }
