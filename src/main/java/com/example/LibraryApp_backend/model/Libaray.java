@@ -20,12 +20,12 @@ public class Libaray {
     private String phonenumber;
     private String username;
     private String password;
-    private String confirmpassword;
+
 
     public Libaray() {
     }
 
-    public Libaray(int id, String name, String aadharNo, String address, String pincode, String dateOfBirth, String email, String phonenumber, String username, String password, String confirmpassword) {
+    public Libaray(int id, String name, String aadharNo, String address, String pincode, String dateOfBirth, String email, String phonenumber, String username, String password) {
         this.id = id;
         this.name = name;
         this.aadharNo = aadharNo;
@@ -36,7 +36,7 @@ public class Libaray {
         this.phonenumber = phonenumber;
         this.username = username;
         this.password = password;
-        this.confirmpassword = confirmpassword;
+
     }
 
     public int getId() {
@@ -119,11 +119,5 @@ public class Libaray {
         this.password = password;
     }
 
-    public String getConfirmpassword() {
-        return confirmpassword;
-    }
 
-    public void setConfirmpassword(String confirmpassword) {
-        this.confirmpassword = confirmpassword;
-    }
 }

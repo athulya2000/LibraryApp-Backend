@@ -31,7 +31,7 @@ public class LibraryController {
         System.out.println(l.getPhonenumber().toString());
         System.out.println(l.getUsername().toString());
         System.out.println(l.getPassword().toString());
-        System.out.println(l.getConfirmpassword().toString());
+
         dao.save(l);
         HashMap<String,String> map=new HashMap<>();
         map.put("status","success");
